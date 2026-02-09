@@ -101,5 +101,5 @@ blockquote {
 }
 
 .button:hover {
-  background-color: #3a8fb5;
+  background-color: #45a049; /* green on hover */
 }
