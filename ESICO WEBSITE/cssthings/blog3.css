@@ -1,0 +1,106 @@
+/* Reset and base */
+html, body {
+    height: 100%;
+}
+
+.author {
+    text-align: center;
+    margin-top: -20px;
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* Page background */
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sans-serif for body */
+
+    background-image: url("https://wallpapers.com/images/featured/4k-tech-ulcajgzzc25jlrgi.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #333;
+    margin: 0;
+    padding-top: 40px;
+    line-height: 1.7;
+}
+
+/* Dark overlay for readability */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: -1;
+}
+
+/* Blog boxes (title + content) */
+body > * {
+    max-width: 800px;
+    margin: auto;
+    padding: 25px;
+
+    background-color: rgba(255, 255, 255, 0.78);
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+    margin-bottom: 40px;
+
+    backdrop-filter: blur(6px);
+}
+
+/* Main title */
+h1 {
+    text-align: center;
+    font-family: "Times New Roman", serif; /* Serif for header */
+    font-size: 2.2rem;
+    margin-bottom: 30px;
+    color: #222;
+}
+
+/* Section headings */
+h2 {
+    font-family: "Times New Roman", serif; /* Serif for headers */
+    font-size: 1.4rem;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #333;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 5px;
+}
+
+/* Paragraphs */
+p {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    body > * {
+        padding: 18px;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ba5cf; /* green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049; /* darker green on hover */
+}

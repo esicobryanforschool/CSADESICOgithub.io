@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Sans-serif for body */
+    background-image: url("https://www.intelligenthq.com/wp-content/uploads/2020/09/How-Tech-is-Changing-the-Way-we-Work-1024x639.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: #333;
+    line-height: 1.8;
+}
+
+header {
+    max-width: 800px;
+    margin: 2.5rem auto 1rem;
+    padding: 2rem 2.5rem;
+
+    background-color: rgba(255, 255, 255, 0.94);
+    border-radius: 8px;
+    text-align: center;
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+main {
+    max-width: 800px;
+    margin: 3rem auto;
+    background-color: rgba(255, 255, 255, 0.94);
+    padding: 2.5rem;
+    border-radius: 8px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Headers now serif, body remains sans-serif */
+h1 {
+    font-family: "Times New Roman", serif;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-family: "Times New Roman", serif;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.4rem;
+}
+
+h3 {
+    font-family: "Times New Roman", serif;
+    font-size: 1.3rem;
+    margin-top: 1.8rem;
+    margin-bottom: 0.6rem;
+}
+
+p {
+    margin-bottom: 1.2rem;
+}
+
+#introduction p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+footer p {
+    margin-top: 1rem;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ba5cf; /* green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #45a049; /* darker green on hover */
+}
