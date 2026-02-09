@@ -44,7 +44,7 @@ footer {
     color: #666;
 }
 
-/* Headers now serif, body remains sans-serif */
+
 h1 {
     font-family: "Times New Roman", serif;
     font-size: 2.4rem;
@@ -90,7 +90,7 @@ footer p {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4ba5cf; /* green */
+  background-color: #4ba5cf; 
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -99,5 +99,5 @@ footer p {
 }
 
 .button:hover {
-  background-color: #45a049; /* darker green on hover */
+  background-color: #45a049; /* green on hover */
 }

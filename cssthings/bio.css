@@ -5,17 +5,35 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    /* Changed body color to a darker grey for better contrast on white cards */
     color: #334155; 
     line-height: 1.8;
+}
+
+header {
+    max-width: 800px;
+    margin: 2.5rem auto 1rem;
+    padding: 2rem 2.5rem;
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(8px); 
+    
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3); 
 }
 
 h1 {
   font-family: Georgia, serif;
   font-size: 28px;
-  text-align: center;
-  margin-bottom: 50px;
-  color: #F8FAFC; /* Keeping this light as it sits on the background image */
+  margin-bottom: 10px; 
+  color: #0b0b0c;
+}
+
+header p {
+    text-indent: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    color: #475569;
 }
 
 .cards {
@@ -28,7 +46,6 @@ h1 {
 .card {
   /* White with 80% opacity */
   background: rgba(255, 255, 255, 0.8); 
-  /* Optional: Adds a blur effect to the background behind the card */
   backdrop-filter: blur(10px); 
   max-width: 800px;
   padding: 40px;
@@ -39,14 +56,12 @@ h1 {
 }
 
 h2 {
-  font-family: Georgia, serif;
-  font-size: 22px;
-  margin-bottom: 20px;
-  /* Darker blue for better legibility on white */
-  color: #0369a1; 
-  border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-  display: block;
-  padding-bottom: 10px;
+    font-family: "Times New Roman", serif;
+    font-size: 1.6rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 0.4rem;
 }
 
 p {
@@ -74,7 +89,6 @@ blockquote {
   color: #475569;
 }
 
-/* Rest of your button styles remain the same */
 .button {
   display: inline-block;
   padding: 10px 20px;

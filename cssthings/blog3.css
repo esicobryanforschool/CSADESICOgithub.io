@@ -27,7 +27,6 @@ body {
     line-height: 1.7;
 }
 
-/* Dark overlay for readability */
 body::before {
     content: "";
     position: fixed;
@@ -36,7 +35,7 @@ body::before {
     z-index: -1;
 }
 
-/* Blog boxes (title + content) */
+/* Blog boxes*/
 body > * {
     max-width: 800px;
     margin: auto;
@@ -61,7 +60,7 @@ h1 {
 
 /* Section headings */
 h2 {
-    font-family: "Times New Roman", serif; /* Serif for headers */
+    font-family: "Times New Roman", serif;
     font-size: 1.4rem;
     margin-top: 40px;
     margin-bottom: 10px;
@@ -93,7 +92,7 @@ p {
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4ba5cf; /* green */
+  background-color: #4ba5cf; 
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -102,5 +101,5 @@ p {
 }
 
 .button:hover {
-  background-color: #45a049; /* darker green on hover */
+  background-color: #45a049; /* green on hover */
 }
