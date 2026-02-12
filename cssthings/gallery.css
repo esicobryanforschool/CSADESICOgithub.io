@@ -15,15 +15,24 @@ body {
 header h1 {
     text-align: center;
     margin-bottom: 30px;
+    font-size: 3rem;
 }
 
-/* Gallery grid */
-.gallery-container {
+/* Category titles */
+.category-title {
+    font-size: 2rem;
+    color: #ffd700; /* golden color for headings */
+    border-bottom: 2px solid #555;
+    padding-bottom: 5px;
+    margin: 40px 0 20px 0;
+}
+
+/* Section grid for each category */
+.category-section {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 15px;
-    max-width: 1200px;
-    margin: 0 auto;
+    margin-bottom: 30px;
 }
 
 /* Each gallery item */
@@ -44,6 +53,12 @@ header h1 {
     max-height: 100%;
     object-fit: cover; /* fills the square, crops if needed */
     display: block;
+    transition: transform 0.3s ease;
+}
+
+/* Slight zoom effect on hover */
+.gallery-item:hover img {
+    transform: scale(1.05);
 }
 
 /* Overlay text on hover */
@@ -59,6 +74,10 @@ header h1 {
     align-items: center;
     opacity: 0;
     transition: 0.3s;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
 }
 
 .gallery-item:hover .overlay {
@@ -82,8 +101,17 @@ header h1 {
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
+    margin: 5px 5px 20px 0;
 }
 
 .button:hover {
-    background-color: #055275; /* color change on hover */
+    background-color: #055275;
+}
+
+/* Optional: container for all buttons at bottom */
+.gallery-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 40px;
 }
