@@ -12,40 +12,39 @@ body {
     padding: 20px;
 }
 
+/* Header */
 header h1 {
     text-align: center;
     margin-bottom: 30px;
-    font-size: 3rem;
 }
 
-/* Category titles */
+/* Category title */
 .category-title {
-    font-size: 2rem;
-    color: #ffd700; /* golden headings */
-    border-bottom: 2px solid #555;
-    padding-bottom: 5px;
-    margin: 40px 0 20px 0;
+    margin: 30px 0 15px 0;
+    text-align: left;
+    font-size: 1.8rem;
+    color: #4da3ff;
 }
 
-/* Grid for each category */
+/* Category section grid */
 .category-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* smaller items */
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 15px;
-    margin-bottom: 30px;
-    max-width: 900px; /* shrink container a bit */
-    margin-left: auto;
-    margin-right: auto;
+    margin-bottom: 40px;
 }
 
 /* Each gallery item */
 .gallery-item {
     position: relative;
     width: 100%;
-    aspect-ratio: 1 / 1;  /* keeps items square */
+    aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 5px;
     background: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
 }
 
 /* Images inside gallery */
@@ -54,12 +53,7 @@ header h1 {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.3s ease;
-}
-
-/* Zoom effect on hover */
-.gallery-item:hover img {
-    transform: scale(1.05);
+    border-radius: 5px;
 }
 
 /* Overlay text on hover */
@@ -75,44 +69,60 @@ header h1 {
     align-items: center;
     opacity: 0;
     transition: 0.3s;
-    color: #fff;
-    font-weight: bold;
-    font-size: 1.2rem;
-    text-align: center;
+    pointer-events: none; /* allow clicks to pass through */
 }
 
 .gallery-item:hover .overlay {
     opacity: 1;
 }
 
-/* Category borders */
+/* Small view button under each image */
+.view-button-container {
+    text-align: center;
+    margin-top: 5px;
+}
+
+.view-button {
+    display: inline-block;
+    padding: 5px 10px;
+    font-size: 0.85rem;
+    background-color: #4ba5cf;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.view-button:hover {
+    background-color: #055275;
+}
+
+/* Category borders for images */
 .mechs { border: 3px solid #ff4d4d; }
 .backgrounds { border: 3px solid #4da3ff; }
 .a { border: 3px solid #4dff88; }
 .b { border: 3px solid #ffd14d; }
 .c { border: 3px solid #d14dff; }
 
-/* Buttons */
-.button {
+/* Navigation buttons at bottom */
+.gallery-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.gallery-buttons .button {
     display: inline-block;
     padding: 10px 20px;
+    margin: 5px;
     background-color: #4ba5cf; 
     color: white;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background-color 0.3s;
-    margin: 5px 5px 20px 0;
 }
 
-.button:hover {
+.gallery-buttons .button:hover {
     background-color: #055275;
-}
-
-/* Container for buttons at bottom */
-.gallery-buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 40px;
 }
