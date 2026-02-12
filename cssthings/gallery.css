@@ -21,18 +21,21 @@ header h1 {
 /* Category titles */
 .category-title {
     font-size: 2rem;
-    color: #ffd700; /* golden color for headings */
+    color: #ffd700; /* golden headings */
     border-bottom: 2px solid #555;
     padding-bottom: 5px;
     margin: 40px 0 20px 0;
 }
 
-/* Section grid for each category */
+/* Grid for each category */
 .category-section {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* smaller items */
     gap: 15px;
     margin-bottom: 30px;
+    max-width: 900px; /* shrink container a bit */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Each gallery item */
@@ -49,14 +52,12 @@ header h1 {
 .gallery-item img {
     width: 100%;
     height: 100%;
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: cover; /* fills the square, crops if needed */
+    object-fit: cover;
     display: block;
     transition: transform 0.3s ease;
 }
 
-/* Slight zoom effect on hover */
+/* Zoom effect on hover */
 .gallery-item:hover img {
     transform: scale(1.05);
 }
@@ -108,7 +109,7 @@ header h1 {
     background-color: #055275;
 }
 
-/* Optional: container for all buttons at bottom */
+/* Container for buttons at bottom */
 .gallery-buttons {
     display: flex;
     flex-wrap: wrap;
