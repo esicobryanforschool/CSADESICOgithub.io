@@ -6,7 +6,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif; /* Sans-serif for body */
-    background-image: url("https://www.intelligenthq.com/wp-content/uploads/2020/09/How-Tech-is-Changing-the-Way-we-Work-1024x639.jpg");
+    background-image: url("pics/backgrounds/How-Tech-is-Changing-the-Way-we-Work-1024x639blog 1 background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -99,5 +99,5 @@ footer p {
 }
 
 .button:hover {
-  background-color: #45a049; /* green on hover */
+  background-color: #055275; /* green on hover */
 }

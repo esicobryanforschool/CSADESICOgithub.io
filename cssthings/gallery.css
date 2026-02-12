@@ -1,0 +1,89 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #121212;
+    color: #fff;
+    font-family: sans-serif;
+    padding: 20px;
+}
+
+header h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Gallery grid */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Each gallery item */
+.gallery-item {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;  /* keeps items square */
+    overflow: hidden;
+    border-radius: 5px;
+    background: #222;
+}
+
+/* Images inside gallery */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover; /* fills the square, crops if needed */
+    display: block;
+}
+
+/* Overlay text on hover */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Category borders */
+.mechs { border: 3px solid #ff4d4d; }
+.backgrounds { border: 3px solid #4da3ff; }
+.a { border: 3px solid #4dff88; }
+.b { border: 3px solid #ffd14d; }
+.c { border: 3px solid #d14dff; }
+
+/* Buttons */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4ba5cf; 
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #055275; /* color change on hover */
+}

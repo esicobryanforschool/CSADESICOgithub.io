@@ -15,7 +15,7 @@ html, body {
 body {
     font-family: Arial, Helvetica, sans-serif; /* Sans-serif for body */
 
-    background-image: url("https://wallpapers.com/images/featured/4k-tech-ulcajgzzc25jlrgi.webp");
+    background-image: url("pics/backgrounds/4k-tech-ulcajgzzc25jlrgiblog 3 background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -101,5 +101,5 @@ p {
 }
 
 .button:hover {
-  background-color: #45a049; /* green on hover */
+  background-color: #055275; /* green on hover */
 }

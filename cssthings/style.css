@@ -13,7 +13,7 @@ html, body {
 /* Page background */
 body {
     font-family: Arial, Helvetica, sans-serif; 
-    background-image: url("https://img1.wallspic.com/previews/8/1/9/7/6/167918/167918-anime_landscape-anime-landscape_painting-painting-art-x750.jpg");
+    background-image: url("pics/backgrounds/167918-anime_landscape-anime-landscape_painting-painting-art-x750landing page background.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -100,5 +100,5 @@ p {
 }
 
 .button:hover {
-  background-color: #45a049; /* darker green on hover */
+  background-color: #055275; /* darker green on hover */
 }
