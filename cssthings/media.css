@@ -1,0 +1,83 @@
+body {
+    background-color: #0F172A;
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    color: white;
+}
+
+.title {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    font-size: 40px;
+    letter-spacing: 2px;
+}
+
+/* Container for the 3 cards */
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+/* Each card */
+.card {
+    position: relative;
+    width: 280px;
+    height: 380px;
+    overflow: hidden;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image inside card */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Hover effect (Netflix feel) */
+.card:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 25px rgba(59, 130, 246, 0.8);
+}
+
+/* Dark overlay */
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+}
+
+/* Text label */
+.label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    z-index: 2;
+}
+.med-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ba5cf; /* green */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #055275; /* darker green on hover */
+}

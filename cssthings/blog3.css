@@ -89,6 +89,12 @@ p {
         font-size: 1.2rem;
     }
 }
+
+.blog3-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
 .button {
   display: inline-block;
   padding: 10px 20px;

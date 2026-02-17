@@ -1,0 +1,151 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0F172A;
+    color: #fff;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+    color: #4ba5cf; /* blue theme */
+}
+
+/* Player Section */
+.player {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px auto;
+    max-width: 600px;
+    background-color: #1e1e1e;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.current-track {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.current-track img {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.track-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+}
+
+.track-info p {
+    color: #aaa;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 15px;
+}
+
+.controls button {
+    background: none;
+    border: none;
+    color: #4ba5cf; /* blue controls */
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.controls button:hover {
+    transform: scale(1.2);
+    color: #055275; /* darker blue on hover */
+}
+
+input[type=range] {
+    width: 100%;
+}
+
+/* Playlist */
+.playlist {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.playlist h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.playlist ul {
+    list-style: none;
+}
+
+.playlist li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 10px 15px;
+    border-radius: 10px;
+    transition: background 0.2s;
+    cursor: pointer;
+}
+
+.playlist li:hover {
+    background-color: #2a2a2a;
+}
+
+.playlist li span {
+    color: #4ba5cf; /* blue numbering */
+    font-weight: bold;
+}
+
+/* Buttons */
+.mus-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4ba5cf; /* blue main */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.button:hover {
+    background-color: #055275; /* darker blue on hover */
+}

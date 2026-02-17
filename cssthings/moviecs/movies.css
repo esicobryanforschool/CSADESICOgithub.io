@@ -1,0 +1,114 @@
+/* Reset & Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #0F172A;
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #1f1f1f;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+nav a {
+    color: #bbb;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+}
+
+nav a.active,
+nav a:hover {
+    color: #4ba5cf; /* blue theme */
+}
+
+/* Sections */
+.movie-section {
+    margin: 30px auto;
+    max-width: 1200px;
+    padding: 0 20px;
+}
+
+.movie-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+/* Movie Row */
+.movie-row {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.movie-row::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movie-row::-webkit-scrollbar-thumb {
+    background-color: #333;
+    border-radius: 4px;
+}
+
+/* Movie Cards */
+.movie-card {
+    min-width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.movie-card img {
+    width: 100%;
+    display: block;
+    border-radius: 10px;
+}
+
+.movie-card p {
+    text-align: center;
+    margin-top: 5px;
+    font-weight: 500;
+    color: #4ba5cf; /* blue titles */
+}
+
+.movie-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(75, 165, 207, 0.7); /* blue glow */
+}
+
+/* Buttons */
+.mov-buttons {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #4ba5cf; /* blue main */
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #055275;  /* darker blue hover */
+}
