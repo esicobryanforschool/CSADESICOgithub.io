@@ -3,49 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media - Music</title>
+    <title>🎵 My Spotify Playlist</title>
     <link rel="stylesheet" href="../cssthings/musiccs/music.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>🎵 My Media Music</h1>
-        <nav>
-            <a href="anime.html">Anime</a>
-            <a href="music.html" class="active">Music</a>
-            <a href="movie.html">Movies</a>
-        </nav>
-    </header>
+<header>
+    <h1>🎵 My Media Music</h1>
+    <nav>
+        <a href="anime.html">Anime</a>
+        <a href="music.html" class="active">Music</a>
+        <a href="movie.html">Movies</a>
+    </nav>
+</header>
 
-    <main>
+<main>
 
-        <!-- PLAYLIST SECTION -->
-        <section class="playlist-section">
+    <!-- Playlist Selector -->
+    <section class="playlist-selector">
+        <h2>Select a Playlist</h2>
+        <div class="playlist-buttons">
+            <!-- Replace these IDs with your other public playlists if you have more -->
+            <button onclick="loadPlaylist('0XTAXNBL4kvPPDcZGopupU')">Everyday Mix</button>
+            <button onclick="loadPlaylist('37i9dQZF1DWTyiBJ6yEqeu')">Gaming Mix</button>
+            <button onclick="loadPlaylist('37i9dQZF1DZ06evO0FDzS8')"> Study Mix</button>
+        </div>
+    </section>
 
-            <div class="playlist-header">
-                <h2>My Favorite Playlist</h2>
-                <p>A collection of songs I love listening to.</p>
-            </div>
+    <!-- Player Section -->
+    <section class="music-player">
+        <iframe 
+            id="spotify-player"
+            style="border-radius:12px"
+            src="https://open.spotify.com/embed/playlist/0XTAXNBL4kvPPDcZGopupU?utm_source=generator&theme=0"
+            width="100%"
+            height="352"
+            frameborder="0"
+            allowfullscreen
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy">
+        </iframe>
+    </section>
 
-            <div class="music-player">
-                <iframe
-                    src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID"
-                    width="100%"
-                    height="450"
-                    frameborder="0"
-                    allow="autoplay; encrypted-media"
-                    allowfullscreen>
-                </iframe>
-            </div>
+</main>
 
-        </section>
+<div class="mus-buttons">
+    <a href="../index.html" class="button">Back to landing page</a>
+</div>
 
-    </main>
-
-    <div class="mus-buttons">
-        <a href="../index.html" class="button">Back to landing page</a>
-    </div>
+<script>
+    function loadPlaylist(playlistID) {
+        const player = document.getElementById("spotify-player");
+        player.src = "https://open.spotify.com/embed/playlist/" + playlistID + "?utm_source=generator&theme=0";
+    }
+</script>
 
 </body>
 </html>

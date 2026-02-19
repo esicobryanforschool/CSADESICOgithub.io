@@ -158,6 +158,44 @@ input[type=range] {
     text-align: center;
 }
 
+.playlist-selector {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.playlist-selector h2 {
+    margin-bottom: 20px;
+    font-size: 1.6rem;
+}
+
+.playlist-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.playlist-buttons button {
+    padding: 12px 25px;
+    background-color: #4ba5cf;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.playlist-buttons button:hover {
+    background-color: #055275;
+    transform: scale(1.05);
+}
+
+.music-player {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+}
+
 .button {
     display: inline-block;
     padding: 12px 25px;
