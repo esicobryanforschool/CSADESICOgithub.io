@@ -10,47 +10,41 @@
 <body>
 
     <header>
-        <h1>🎵 My Media Music (work in progress)</h1>
+        <h1>🎵 My Media Music</h1>
         <nav>
-            
             <a href="anime.html">Anime</a>
-            <a href="music.html"class="active">Music</a>
-            <a href="movie.html" >Movies</a>
+            <a href="music.html" class="active">Music</a>
+            <a href="movie.html">Movies</a>
         </nav>
     </header>
 
     <main>
-        <section class="player">
-            <div class="current-track">
-                <img src="album-placeholder.jpg" alt="Album Art">
-                <div class="track-info">
-                    <h2>Track Name</h2>
-                    <p>Artist Name</p>
-                </div>
+
+        <!-- PLAYLIST SECTION -->
+        <section class="playlist-section">
+
+            <div class="playlist-header">
+                <h2>My Favorite Playlist</h2>
+                <p>A collection of songs I love listening to.</p>
             </div>
-            <div class="controls">
-                <button>⏮️</button>
-                <button>▶️</button>
-                <button>⏭️</button>
+
+            <div class="music-player">
+                <iframe
+                    src="https://www.youtube.com/embed/videoseries?list=YOUR_PLAYLIST_ID"
+                    width="100%"
+                    height="450"
+                    frameborder="0"
+                    allow="autoplay; encrypted-media"
+                    allowfullscreen>
+                </iframe>
             </div>
-            <input type="range" value="0" max="100">
+
         </section>
 
-        <section class="playlist">
-            <h2>Playlist</h2>
-            <ul>
-                <li><span>1</span> Song Title One - Artist</li>
-                <li><span>2</span> Song Title Two - Artist</li>
-                <li><span>3</span> Song Title Three - Artist</li>
-                <li><span>4</span> Song Title Four - Artist</li>
-                <li><span>5</span> Song Title Five - Artist</li>
-            </ul>
-        </section>
     </main>
 
     <div class="mus-buttons">
-    <a href="../index.html" class="button">Back to landing page</a>
-    
+        <a href="../index.html" class="button">Back to landing page</a>
     </div>
 
 </body>
