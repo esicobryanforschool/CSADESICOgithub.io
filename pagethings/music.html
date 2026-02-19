@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>🎵 My Spotify Playlist</title>
+    <title>🎵 My Music Library</title>
     <link rel="stylesheet" href="../cssthings/musiccs/music.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <h1>🎵 My Media Music</h1>
+    <h1>🎵 My Music Library</h1>
     <nav>
         <a href="anime.html">Anime</a>
         <a href="music.html" class="active">Music</a>
@@ -20,18 +20,36 @@
 
 <main>
 
-    <!-- Playlist Selector -->
-    <section class="playlist-selector">
-        <h2>Select a Playlist</h2>
-        <div class="playlist-buttons">
-            <!-- Replace these IDs with your other public playlists if you have more -->
-            <button onclick="loadPlaylist('0XTAXNBL4kvPPDcZGopupU')">Everyday Mix</button>
-            <button onclick="loadPlaylist('37i9dQZF1DWTyiBJ6yEqeu')">Gaming Mix</button>
-            <button onclick="loadPlaylist('37i9dQZF1DZ06evO0FDzS8')"> Study Mix</button>
+    <!-- PLAYLIST SECTION -->
+    <section class="playlist-section">
+        <h2>🎶 Playlists</h2>
+        <div class="playlist-row">
+
+            <!-- Everyday Mix -->
+            <div class="playlist-card">
+                <h3>Everyday Mix</h3>
+                <p>Relaxing tunes for daily listening.</p>
+                <button onclick="loadPlaylist('0XTAXNBL4kvPPDcZGopupU')">▶ Play</button>
+            </div>
+
+            <!-- Gaming Mix -->
+            <div class="playlist-card">
+                <h3>Gaming Mix</h3>
+                <p>High-energy tracks for gaming sessions.</p>
+                <button onclick="loadPlaylist('37i9dQZF1DWTyiBJ6yEqeu')">▶ Play</button>
+            </div>
+
+            <!-- Study Mix -->
+            <div class="playlist-card">
+                <h3>Study Mix</h3>
+                <p>Focus music to boost concentration.</p>
+                <button onclick="loadPlaylist('37i9dQZF1DZ06evO0FDzS8')">▶ Play</button>
+            </div>
+
         </div>
     </section>
 
-    <!-- Player Section -->
+    <!-- SPOTIFY PLAYER -->
     <section class="music-player">
         <iframe 
             id="spotify-player"
@@ -53,10 +71,10 @@
 </div>
 
 <script>
-    function loadPlaylist(playlistID) {
-        const player = document.getElementById("spotify-player");
-        player.src = "https://open.spotify.com/embed/playlist/" + playlistID + "?utm_source=generator&theme=0";
-    }
+function loadPlaylist(playlistID) {
+    const player = document.getElementById("spotify-player");
+    player.src = "https://open.spotify.com/embed/playlist/" + playlistID + "?utm_source=generator&theme=0";
+}
 </script>
 
 </body>

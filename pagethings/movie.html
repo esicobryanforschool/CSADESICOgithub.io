@@ -10,7 +10,7 @@
 <body>
 
 <header>
-    <h1>🎬 My Movie & TV Database</h1>
+    <h1>🎬 Movie & TV shows I like</h1>
     <nav>
         <a href="anime.html">Anime</a>
         <a href="music.html">Music</a>
@@ -22,7 +22,7 @@
 
     <!-- ANIME MOVIES -->
     <section class="movie-section">
-        <h2>🎥 Anime Movies</h2>
+        <h2>🎥Movies</h2>
         <div class="movie-row">
 
             <!-- Overlord -->
@@ -32,7 +32,10 @@
                     <h3>Overlord: The Sacred Kingdom</h3>
                     <p>2024 • Dark Fantasy</p>
                     <p>⭐ 6.9/10</p>
-                    <button onclick="openTrailer('lFvHcKjRr6Q')">▶ Trailer</button>
+                    <!-- IMDb Link Button -->
+                    <a href="https://www.imdb.com/video/vi3126314521/?playlistId=tt14603848&ref_=ext_shr_lnk" target="_blank">
+                        <button>▶ Trailer</button>
+                    </a>
                 </div>
             </div>
 
@@ -43,7 +46,9 @@
                     <h3>Your Name</h3>
                     <p>2016 • Romance/Fantasy</p>
                     <p>⭐ 8.4/10</p>
-                    <button onclick="openTrailer('xU47nhruN-Q')">▶ Trailer</button>
+                    <a href="https://www.imdb.com/video/vi1705097753/?playlistId=tt5311514&ref_=ext_shr_lnk" target="_blank">
+                        <button>▶ Trailer</button>
+                    </a>
                 </div>
             </div>
 
@@ -54,7 +59,9 @@
                     <h3>Spirited Away</h3>
                     <p>2001 • Fantasy</p>
                     <p>⭐ 8.6/10</p>
-                    <button onclick="openTrailer('ByXuk9QqQkk')">▶ Trailer</button>
+                    <a href="https://www.imdb.com/video/vi3619684633/?playlistId=tt0245429&ref_=ext_shr_lnk" target="_blank">
+                        <button>▶ Trailer</button>
+                    </a>
                 </div>
             </div>
 
@@ -68,62 +75,36 @@
 
             <!-- Love Death + Robots -->
             <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/xbZQ3fDl0y5mt0ARwfeyrgQ4JTw.jpg" alt="Love Death and Robots">
+                <img src="../cssthings/pics/coverpics/61133124.jpg" alt="Love Death and Robots">
                 <div class="movie-info">
                     <h3>Love, Death & Robots</h3>
                     <p>2019 • Sci-Fi Anthology</p>
                     <p>⭐ 8.4/10</p>
-                    <button onclick="openTrailer('wUFwunMKa4E')">▶ Trailer</button>
+                    <a href="https://www.imdb.com/video/vi4240033817/?playlistId=tt9561862&ref_=ext_shr_lnk" target="_blank">
+                        <button>▶ Trailer</button>
+                    </a>
                 </div>
             </div>
 
             <!-- Secret Level -->
             <div class="movie-card">
-                <img src="https://image.tmdb.org/t/p/w500/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg" alt="Secret Level">
+                <img src="../cssthings/pics/coverpics/MV5BZWEwMjgwOTYtZmM1MC00MzdhLWJhMmUtNmNhNGMxMDdkYzNmXkEyXkFqcGc@._V1_.jpg" alt="Secret Level">
                 <div class="movie-info">
                     <h3>Secret Level</h3>
                     <p>2024 • Sci-Fi/Action</p>
-                    <p>⭐ 8.2/10</p>
-                    <button onclick="openTrailer('bOeV6zA3dHc')">▶ Trailer</button>
+                    <p>⭐ 7.3/10</p>
+                    <a href="https://www.imdb.com/video/vi2811349273/?playlistId=tt33204697&ref_=ext_shr_lnk" target="_blank">
+                        <button>▶ Trailer</button>
+                    </a>
                 </div>
             </div>
 
         </div>
     </section>
-
-</main>
-
-<!-- Trailer Modal -->
-<div id="trailer-modal" class="trailer-modal">
-    <div class="trailer-content">
-        <span class="close-btn" onclick="closeTrailer()">✖</span>
-        <iframe id="trailer-video"
-            width="100%"
-            height="400"
-            frameborder="0"
-            allow="autoplay; encrypted-media"
-            allowfullscreen>
-        </iframe>
-    </div>
+<div class="mov-buttons">
+    <a href="../index.html" class="button">Back to landing page</a>
 </div>
-
-<script>
-function openTrailer(videoID) {
-    const modal = document.getElementById("trailer-modal");
-    const iframe = document.getElementById("trailer-video");
-
-    iframe.src = "https://www.youtube.com/embed/" + videoID + "?autoplay=1";
-    modal.style.display = "flex";
-}
-
-function closeTrailer() {
-    const modal = document.getElementById("trailer-modal");
-    const iframe = document.getElementById("trailer-video");
-
-    iframe.src = "";
-    modal.style.display = "none";
-}
-</script>
+</main>
 
 </body>
 </html>

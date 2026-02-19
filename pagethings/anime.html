@@ -3,49 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <title>Anime Library</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../cssthings/animecs/anime.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>🎬 Anime Library</h1>
-        <nav>
-            <a href="anime.html" class="active">Anime</a>
-            <a href="music.html">Music</a>
-            <a href="movie.html">Movies</a>
-        </nav>
-    </header>
+<header>
+    <h1>🎬 Anime Library</h1>
+    <nav>
+        <a href="anime.html" class="active">Anime</a>
+        <a href="music.html">Music</a>
+        <a href="movie.html">Movies</a>
+    </nav>
+</header>
 
-    <div class="anime-container">
+<main>
 
-        <!-- ANIME CARD 1 -->
-        <a href="../pagethings/anime episodes/ironbloodedgundamep1/ep1.html" class="anime-card">
-            <img src="../cssthings/pics/coverpics/MobileSuitGundamIronBloodedOrphans.jpg" alt="Gundam">
-            <div class="anime-info">
-                <h2>Mobile Suit Gundam: Iron-Blooded Orphans</h2>
-                <p>Mecha battles, war drama, and legendary pilots.</p>
+    <section class="anime-section">
+        <h2>📺 Anime Shows</h2>
+        <div class="anime-row">
+
+            <!-- Anime Card 1 -->
+            <div class="anime-card">
+                <img src="../cssthings/pics/coverpics/MobileSuitGundamIronBloodedOrphans.jpg" alt="Gundam">
+                <div class="anime-info">
+                    <h3>Mobile Suit Gundam: Iron-Blooded Orphans</h3>
+                    <p>Mecha battles, war drama, and legendary pilots.</p>
+                    <a href="../pagethings/anime episodes/ironbloodedgundamep1/ep1.html" target="_blank">
+                        <button>▶ Watch Episode</button>
+                    </a>
+                </div>
             </div>
-        </a>
 
-        <!-- ANIME CARD 2 -->
-        <a href="../pagethings/anime episodes/ironbloodedgundamep2/ep1.html" class="anime-card">
-            <img src="../cssthings/pics/coverpics/MobileSuitGundamIronBloodedOrphans2.jpg" alt="Gundam">
-            <div class="anime-info">
-                <h2>Mobile Suit Gundam: Iron-Blooded Orphans S2</h2>
-                <p>Mecha battles, war drama, and legendary pilots.</p>
+            <!-- Anime Card 2 -->
+            <div class="anime-card">
+                <img src="../cssthings/pics/coverpics/MobileSuitGundamIronBloodedOrphans2.jpg" alt="Gundam S2">
+                <div class="anime-info">
+                    <h3>Mobile Suit Gundam: Iron-Blooded Orphans S2</h3>
+                    <p>Mecha battles, war drama, and legendary pilots.</p>
+                    <a href="../pagethings/anime episodes/ironbloodedgundamep2/ep1.html" target="_blank">
+                        <button>▶ Watch Episode</button>
+                    </a>
+                </div>
             </div>
-        </a>
 
-        <!-- ADD MORE ANIME BELOW THIS LINE -->
+            <!-- ADD MORE ANIME HERE -->
+        </div>
+    </section>
 
-    </div>
+</main>
 
-    <div class="ani-buttons">
-        <a href="../index.html" class="button">Back to landing page</a>
-        
-    </div>
+<div class="ani-buttons">
+    <a href="../index.html" class="button">Back to landing page</a>
+</div>
 
 </body>
-
-
 </html>
