@@ -13,30 +13,35 @@ body {
 
 /* LEFT EPISODE LIST */
 .episode-list {
-    width: 250px;
+    width: 260px;
     background-color: #111827;
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
+    border-right: 1px solid #1F2937;
 }
 
 .episode-list h2 {
     color: #93C5FD;
     margin-top: 0;
+    margin-bottom: 15px;
 }
 
+/* Episode links */
 .episode-link {
     display: block;
-    padding: 10px;
+    padding: 10px 12px;
     margin-bottom: 8px;
     text-decoration: none;
     color: #D1D5DB;
     border-radius: 6px;
-    transition: background 0.2s;
+    transition: all 0.2s ease;
+    font-size: 14px;
 }
 
 .episode-link:hover {
     background-color: #1E293B;
+    transform: translateX(3px);
 }
 
 .active {
@@ -47,65 +52,88 @@ body {
 /* RIGHT PLAYER SECTION */
 .player-section {
     flex: 1;
-    padding: 30px;
+    padding: 40px;
 }
 
-.back-btn {
+/* Back button */
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #2563EB;
+    color: white;
     text-decoration: none;
-    color: #60A5FA;
+    border-radius: 6px;
+    font-weight: bold;
     font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-bottom: 15px;
 }
 
-.back-btn:hover {
-    text-decoration: underline;
+.button:hover {
+    background-color: #1D4ED8;
 }
 
+/* Title */
 .episode-title {
-    margin: 15px 0;
+    margin: 10px 0 20px;
+    font-size: 24px;
+    font-weight: 600;
 }
 
 /* Prev/Next buttons */
 .nav-buttons {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .nav-buttons a {
     text-decoration: none;
     color: white;
     background-color: #2563EB;
-    padding: 6px 12px;
+    padding: 6px 14px;
     margin-right: 10px;
     border-radius: 6px;
-    font-size: 14px;
+    font-size: 13px;
+    transition: background-color 0.3s ease;
 }
 
 .nav-buttons a:hover {
     background-color: #1D4ED8;
 }
 
-/* Disabled button style */
+/* Disabled button */
 .disabled {
     background-color: #374151;
     pointer-events: none;
 }
 
-/* Video */
+/* VIDEO CONTAINER */
+/* Slimmer, centered, responsive 16:9 */
 .video-container {
-    background: black;
+    max-width: 850px;
+    margin: 0 auto;
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 0 20px rgba(59,130,246,0.4);
+    box-shadow: 0 0 25px rgba(59,130,246,0.35);
+    position: relative;
+    padding-top: 56.25%; /* 16:9 ratio */
+    background: black;
 }
 
+/* Works for iframe OR video */
+.video-container iframe,
 .video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    border: none;
 }
 
 /* Description */
 .episode-info {
-    margin-top: 20px;
+    max-width: 850px;
+    margin: 25px auto 0;
     background-color: #111827;
     padding: 20px;
     border-radius: 12px;
@@ -114,21 +142,10 @@ body {
 .episode-info h2 {
     margin-top: 0;
     color: #93C5FD;
+    font-size: 18px;
 }
 
-.button {
-  display: inline-block;
-  padding: 10px 20px;
-  background-color: #4ba5cf;
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s;
-  margin-top: 30px;
-  text-align: center;
-}
-
-.button:hover {
-  background-color: #055275;  /* green on hover */
+.episode-info p {
+    line-height: 1.6;
+    font-size: 14px;
 }
