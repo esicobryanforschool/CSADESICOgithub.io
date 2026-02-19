@@ -2,79 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Media - Movies & TV</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Media - Movies</title>
     <link rel="stylesheet" href="../cssthings/moviecs/movies.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <h1>🎬 My Media Movies (work in progress)</h1>
-        <nav>
-            
-            <a href="anime.html">Anime</a>
-            <a href="music.html">Music</a>
-            <a href="movie.html" class="active">Movies</a>
-        </nav>
-    </header>
+<header>
+    <h1>🎬 My Movie & TV Database</h1>
+    <nav>
+        <a href="anime.html">Anime</a>
+        <a href="music.html">Music</a>
+        <a href="movie.html" class="active">Movies</a>
+    </nav>
+</header>
 
-    <main>
-        <section class="movie-section">
-            <h2>Trending Now</h2>
-            <div class="movie-row">
-                <div class="movie-card">
-                    <img src="movie1.jpg" alt="Movie 1">
-                    <p>Movie Title 1</p>
-                </div>
-                <div class="movie-card">
-                    <img src="movie2.jpg" alt="Movie 2">
-                    <p>Movie Title 2</p>
-                </div>
-                <div class="movie-card">
-                    <img src="movie3.jpg" alt="Movie 3">
-                    <p>Movie Title 3</p>
-                </div>
-                <div class="movie-card">
-                    <img src="movie4.jpg" alt="Movie 4">
-                    <p>Movie Title 4</p>
+<main>
+
+    <!-- ANIME MOVIES -->
+    <section class="movie-section">
+        <h2>🎥 Anime Movies</h2>
+        <div class="movie-row">
+
+            <!-- Overlord -->
+            <div class="movie-card">
+                <img src="../cssthings/pics/coverpics/MV5BOWI0ZjQ3ZTYtZGU5NC00NmU1LTlkMzMtMmY1OGM4NjRiZDljXkEyXkFqcGc@._V1_.jpg" alt="Overlord Movie">
+                <div class="movie-info">
+                    <h3>Overlord: The Sacred Kingdom</h3>
+                    <p>2024 • Dark Fantasy</p>
+                    <p>⭐ 6.9/10</p>
+                    <button onclick="openTrailer('lFvHcKjRr6Q')">▶ Trailer</button>
                 </div>
             </div>
-        </section>
 
-        <section class="movie-section">
-            <h2>Recently Added</h2>
-            <div class="movie-row">
-                <div class="movie-card">
-                    <img src="movie5.jpg" alt="Movie 5">
-                    <p>Movie Title 5</p>
-                </div>
-                <div class="movie-card">
-                    <img src="movie6.jpg" alt="Movie 6">
-                    <p>Movie Title 6</p>
-                </div>
-                <div class="movie-card">
-                    <img src="movie7.jpg" alt="Movie 7">
-                    <p>Movie Title 7</p>
-                </div>
-                <div class="movie-card">
-                    <img src="movie8.jpg" alt="Movie 8">
-                    <p>Movie Title 8</p>
+            <!-- Your Name -->
+            <div class="movie-card">
+                <img src="../cssthings/pics/coverpics/q719jXXEzOoYaps6babgKnONONX.webp" alt="Your Name">
+                <div class="movie-info">
+                    <h3>Your Name</h3>
+                    <p>2016 • Romance/Fantasy</p>
+                    <p>⭐ 8.4/10</p>
+                    <button onclick="openTrailer('xU47nhruN-Q')">▶ Trailer</button>
                 </div>
             </div>
-        </section>
-    </main>
 
-<div class="mov-buttons">
-    <a href="../index.html" class="button">Back to landing page</a>
-    
+            <!-- Spirited Away -->
+            <div class="movie-card">
+                <img src="../cssthings/pics/coverpics/39wmItIWsg5sZMyRUHLkWBcuVCM.webp" alt="Spirited Away">
+                <div class="movie-info">
+                    <h3>Spirited Away</h3>
+                    <p>2001 • Fantasy</p>
+                    <p>⭐ 8.6/10</p>
+                    <button onclick="openTrailer('ByXuk9QqQkk')">▶ Trailer</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- TV SHOWS -->
+    <section class="movie-section">
+        <h2>📺 TV Shows</h2>
+        <div class="movie-row">
+
+            <!-- Love Death + Robots -->
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/xbZQ3fDl0y5mt0ARwfeyrgQ4JTw.jpg" alt="Love Death and Robots">
+                <div class="movie-info">
+                    <h3>Love, Death & Robots</h3>
+                    <p>2019 • Sci-Fi Anthology</p>
+                    <p>⭐ 8.4/10</p>
+                    <button onclick="openTrailer('wUFwunMKa4E')">▶ Trailer</button>
+                </div>
+            </div>
+
+            <!-- Secret Level -->
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/8WUVHemHFH2ZIP6NWkwlHWsyrEL.jpg" alt="Secret Level">
+                <div class="movie-info">
+                    <h3>Secret Level</h3>
+                    <p>2024 • Sci-Fi/Action</p>
+                    <p>⭐ 8.2/10</p>
+                    <button onclick="openTrailer('bOeV6zA3dHc')">▶ Trailer</button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</main>
+
+<!-- Trailer Modal -->
+<div id="trailer-modal" class="trailer-modal">
+    <div class="trailer-content">
+        <span class="close-btn" onclick="closeTrailer()">✖</span>
+        <iframe id="trailer-video"
+            width="100%"
+            height="400"
+            frameborder="0"
+            allow="autoplay; encrypted-media"
+            allowfullscreen>
+        </iframe>
     </div>
+</div>
+
+<script>
+function openTrailer(videoID) {
+    const modal = document.getElementById("trailer-modal");
+    const iframe = document.getElementById("trailer-video");
+
+    iframe.src = "https://www.youtube.com/embed/" + videoID + "?autoplay=1";
+    modal.style.display = "flex";
+}
+
+function closeTrailer() {
+    const modal = document.getElementById("trailer-modal");
+    const iframe = document.getElementById("trailer-video");
+
+    iframe.src = "";
+    modal.style.display = "none";
+}
+</script>
 
 </body>
 </html>
-    
-    
-    
-    
-    
-    
