@@ -2,113 +2,64 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Dreams & Goals</title>
+    <title>Dream Places</title>
     <link rel="stylesheet" href="../cssthings/dreams.css">
 </head>
-
 <body>
 
-<header>
-    <h1>Dream Places & Bucket List</h1>
-</header>
+    <h1 class="title">Dream Places to Visit</h1>
 
-<main>
+    <div class="map-container">
+        <img src="../cssthings/pics/picmap/dreamplacesmap.png" usemap="#dreammap" class="collage">
 
-    <!-- Dream Places Section -->
-    <section>
-        <h2 class="section-title">🌍 Dream Places to Visit</h2>
+        <map name="dreammap">
 
-        <div class="card-grid">
+            <!-- 1 RECTANGLE (Square) – Japan (Top Left) -->
+            <area shape="rect"
+                  coords="0,0,420,330"
+                  href="japan.html"
+                  alt="Japan">
 
-            <div class="card">
-                <a href="https://www.gotokyo.org/en/" target="_blank">
-                    <img src="../cssthings/pics/coverpics/gettyimages-1390815938.jpg">
-                </a>
-                <h3>Tokyo, Japan</h3>
-                <p>I want to experience the anime culture, neon city nights, and traditional shrines all in one place.</p>
-            </div>
+            <!-- 1 POLYGON – Swiss Alps (Top Middle) -->
+            <area shape="poly"
+                  coords="420,0,860,0,860,330,420,330"
+                  href="swiss.html"
+                  alt="Swiss Alps">
 
-            <div class="card">
-                <a href="https://www.myswitzerland.com/en/" target="_blank">
-                    <img src="../cssthings/pics/coverpics/outlooktraveller_import_outlooktraveller_public_uploads_articles_explore_Depositphotos_66016481_S.jpg">
-                </a>
-                <h3>Swiss Alps</h3>
-                <p>The mountain views look unreal. I want to see snow-covered peaks and peaceful landscapes.</p>
-            </div>
+            <!-- 1 POLYGON – Dubai (Top Right) -->
+            <area shape="poly"
+                  coords="860,0,1280,0,1280,330,860,330"
+                  href="dubai.html"
+                  alt="Dubai">
 
-            <div class="card">
-                <a href="https://www.visitdubai.com/" target="_blank">
-                    <img src="../cssthings/pics/coverpics/vovea0rrgjojr9pgdp7b.jpg">
-                </a>
-                <h3>Dubai, UAE</h3>
-                <p>The futuristic skyline and desert adventures look like something from another world.</p>
-            </div>
+            <!-- 1 POLYGON – Santorini (Bottom Left) -->
+            <area shape="poly"
+                  coords="0,330,640,720,0,720"
+                  href="greece.html"
+                  alt="Santorini">
 
-            <div class="card">
-                <a href="https://www.visitgreece.gr/islands/cyclades/santorini/" target="_blank">
-                    <img src="../cssthings/pics/coverpics/merakos_05_santorini-oia_1743x752.jpg">
-                </a>
-                <h3>Santorini, Greece</h3>
-                <p>The blue and white buildings with ocean sunsets look peaceful and beautiful.</p>
-            </div>
+            <!-- 1 CIRCLE – Canada (Bottom Right) -->
+            <area shape="circle"
+                  coords="1020,540,180"
+                  href="canada.html"
+                  alt="Canada">
 
-            <div class="card">
-                <a href="https://travel.gc.ca" target="_blank">
-                    <img src="../cssthings/pics/coverpics/Winter-RHL-Aerial-PaulMorrison-1024x576.jpg">
-                </a>
-                <h3>Canada</h3>
-                <p>I’m drawn to Canada’s stunning landscapes, welcoming atmosphere, and the balance between vibrant cities and peaceful natural scenery.</p>
-            </div>
-
-        </div>
-    </section>
+        </map>
 
 
-    <!-- Bucket List Section -->
-    <section>
-        <h2 class="section-title">⭐ Bucket List</h2>
 
-        <div class="bucket-grid">
-
-            <div class="bucket-item">
-                <h3>Graduate</h3>
-                <p>I want to finish collage with a degree in Computer Science.</p>
-            </div>
-
-            <div class="bucket-item">
-                <h3>Find work</h3>
-                <p>Get a job in cyber security or as a game dev in a company like Sony Interactive Entertainment,Valve Corporation,HoYoverse.</p>
-            </div>
-
-            <div class="bucket-item">
-                <h3>Travel to different Countries</h3>
-                <p>Experience different cultures, food, and ways of life.</p>
-            </div>
-
-            <div class="bucket-item">
-                <h3>Own My Dream Setup</h3>
-                <p>Build my dream gaming and development workspace, complete with immersive VR, sim racing, and aviation simulator setups.</p>
-            </div>
-
-            <div class="bucket-item">
-                <h3>Learn Japanese</h3>
-                <p>Be able to understand anime and communicate fluently when visiting Japan.</p>
-            </div>
-
-        </div>
-    </section>
-
-    <div class="nav-buttons">
+    </div>
+<div class="nav-buttons">
 <a href="../index.html" class="button">Back to landing page</a>
 <a href="bio.html" class="button">To Bio</a>
-<a href="blog2.html" class="button">To Blog 2</a>
 <a href="blog1.html" class="button">To Blog 1</a>
+<a href="blog2.html" class="button">To Blog 2</a>
+<a href="blog3.html" class="button">To Blog 3</a>
 <a href="gallery.html" class="button">To Gallery</a>
 <a href="media.html" class="button">To Media</a>
-
+<a href="bucket.html" class="button">To Bucket List</a>
 </div>
 
-</main>
 
 </body>
 </html>

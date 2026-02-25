@@ -1,126 +1,55 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Full-page Background */
 body {
-    font-family: Arial, sans-serif;
-    background: 
-        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-        url("../cssthings/pics/backgrounds/thumb-1920-167444.jpg") no-repeat center center fixed;
-    background-size: cover;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     color: white;
-    min-height: 100vh;
-}
-
-/* Header */
-header {
     text-align: center;
-    padding: 30px 20px;
-    background: transparent;
+
+    background:
+        linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+        url("../cssthings/pics/backgrounds/world-map-19378728.webp")
+        no-repeat center center fixed;
+
+    background-size: cover;
 }
 
-header h1 {
-    font-size: 2.5rem;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.7);
+.title {
+    margin: 40px 0;
+    font-size: 40px;
 }
 
-/* Section Titles */
-.section-title {
-    margin: 40px 20px 20px 20px;
-    font-size: 1.8rem;
-    text-align: center;
-    text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.7);
+.map-container {
+    display: flex;
+    justify-content: center;
 }
 
-/* Dream Places Grid */
-.card-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 25px;
-    padding: 0 30px;
-    margin-bottom: 60px;
+.collage {
+    width: 1280px; /* match your image resolution */
+    max-width: 100%;
 }
 
-.card {
-    background: rgba(0, 0, 0, 0.55);
-    border-radius: 12px;
-    overflow: hidden;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-.card:hover {
-    transform: scale(1.05);
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.card img {
-    width: 100%;
-    height: 170px;
-    object-fit: cover;
-}
-
-.card h3 {
-    margin: 15px;
-    font-size: 1.4rem;
-}
-
-.card p {
-    margin: 0 15px 15px 15px;
-    font-size: 0.95rem;
-    color: #e5e5e5;
-}
-
-/* Bucket List */
-.bucket-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-    padding: 0 30px;
-    margin-bottom: 60px;
-}
-
-.bucket-item {
-    background: rgba(0, 0, 0, 0.55);
-    padding: 20px;
-    border-radius: 10px;
-    transition: background 0.3s ease, transform 0.3s ease;
-}
-
-.bucket-item:hover {
-    transform: translateY(-5px);
-    background: rgba(0, 0, 0, 0.7);
-}
-
-.bucket-item h3 {
-    margin-bottom: 10px;
-    font-size: 1.3rem;
-}
-
-.bucket-item p {
-    font-size: 0.93rem;
-    color: #e3e3e3;
-}
-
-/* Navigation Button */
+/* Navigation Buttons Container */
 .nav-buttons {
-    text-align: center;
-    margin: 50px 0;
+    margin: 60px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 
+/* Button Styling */
 .button {
-    padding: 10px 25px;
-    background: #4ba5cf;
+    display: inline-block;
+    padding: 10px 22px;
+    background-color: #4ba5cf;
     color: white;
     text-decoration: none;
     border-radius: 6px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
+/* Hover Effect */
 .button:hover {
-    background: #055275;
+    background-color: #055275;
     transform: scale(1.07);
 }

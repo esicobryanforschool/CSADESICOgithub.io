@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0f172a; 
+    background-image: linear-gradient(rgba(15, 23, 42, 0.3), rgba(15, 23, 42, 0.3)), 
+                      url('../cssthings/pics/backgrounds/this is a bucket.webp');
+    
+    /* This ensures the whole image (including the text) fits inside the screen */
+    background-size: contain; 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    
+    color: #e2e8f0;
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px;
+    /* Semi-transparent so the top text of the bucket can peek through if needed */
+    background: rgba(0, 0, 0, 0.6); 
+    border-bottom: 2px solid #3b82f6;
+    margin-bottom: 50px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-shadow: 0 0 15px rgba(59, 130, 246, 0.8);
+}
+
+.section-title {
+    color: #60a5fa;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 40px;
+    /* Added background to title to ensure it's readable over the bucket image */
+    display: inline-block;
+    background: rgba(15, 23, 42, 0.8);
+    padding: 5px 20px;
+    border-radius: 10px;
+}
+
+.bucket-section {
+    padding: 20px 8%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.bucket-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px;
+}
+
+.bucket-item {
+    /* Made these slightly more solid (0.85) so the bucket image text doesn't clash with your list text */
+    background: rgba(15, 23, 42, 0.85); 
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.bucket-item:hover {
+    transform: translateY(-12px);
+    background: rgba(30, 58, 138, 0.9);
+    border-color: #60a5fa;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+}
+
+.bucket-item h3 {
+    color: #93c5fd;
+    margin-bottom: 15px;
+}
+
+.bucket-item p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.nav-container {
+    margin-top: 80px;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.button {
+    display: inline-block;
+    margin: 8px;
+    padding: 12px 24px;
+    background: #1e40af;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #3b82f6;
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.6);
+}
