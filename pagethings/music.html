@@ -10,72 +10,83 @@
 <body>
 
 <header>
-    <h1>🎵 My Music Library</h1>
-    <nav>
-        <a href="anime.html">Anime</a>
-        <a href="music.html" class="active">Music</a>
-        <a href="movie.html">Movies</a>
-    </nav>
+    <div class="header-content">
+        <h1>🎵 My Music Library</h1>
+        <nav>
+            <a href="anime.html">Anime</a>
+            <a href="music.html" class="active">Music</a>
+            <a href="movie.html">Movies</a>
+        </nav>
+    </div>
 </header>
 
-<main>
-
-    <!-- PLAYLIST SECTION -->
-    <section class="playlist-section">
-        <h2>🎶 Playlists</h2>
-        <div class="playlist-row">
-
-            <!-- Everyday Mix -->
-            <div class="playlist-card">
-                <h3>Everyday Mix</h3>
-                <p>Relaxing tunes for daily listening.</p>
-                <button onclick="loadPlaylist('0XTAXNBL4kvPPDcZGopupU')">▶ Play</button>
-            </div>
-
-            <!-- Gaming Mix -->
-            <div class="playlist-card">
-                <h3>Gaming Mix</h3>
-                <p>High-energy tracks for gaming sessions.</p>
-                <button onclick="loadPlaylist('37i9dQZF1DWTyiBJ6yEqeu')">▶ Play</button>
-            </div>
-
-            <!-- Study Mix -->
-            <div class="playlist-card">
-                <h3>Study Mix</h3>
-                <p>Focus music to boost concentration.</p>
-                <button onclick="loadPlaylist('37i9dQZF1DZ06evO0FDzS8')">▶ Play</button>
-            </div>
-
+<main class="music-container">
+    <section class="song-column">
+        <div class="song-item">
+            <p>01. About the Game</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/About_the_Game.mp3" type="audio/mpeg"></audio>
         </div>
-    </section>
+        <div class="song-item">
+            <p>02. All Night Long</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/All_Night_Long.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>03. Balla</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Balla.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>04. Coach Carter</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Beauty_Queen.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>05. Come on Baby</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Hope.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>06. Get Up</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/No_Need_for_Conversation.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>07. Get Up (Remix)</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Professional.mp3" type="audio/mpeg"></audio>
+        </div>
+        </section>
 
-    <!-- SPOTIFY PLAYER -->
-    <section class="music-player">
-        <iframe 
-            id="spotify-player"
-            style="border-radius:12px"
-            src="https://open.spotify.com/embed/playlist/0XTAXNBL4kvPPDcZGopupU?utm_source=generator&theme=0"
-            width="100%"
-            height="352"
-            frameborder="0"
-            allowfullscreen
-            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy">
-        </iframe>
-    </section>
-
+    <section class="song-column">
+        <div class="song-item">
+            <p>08. Track Eight</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Roll_Wit_U.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>09. Track Nine</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Southside.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>10. Track Ten</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/This_One.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>11. Track Eleven</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Time.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>12. Track Twelve</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/What_Love_Can_Do.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>13. Track Thirteen</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Wouldn_t_You_Like_to_Ride.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="song-item">
+            <p>14. Track Fourteen</p>
+            <audio controls><source src="../music/Album_-_Coach_Carter_Soundtrack/Your_Love.mp3" type="audio/mpeg"></audio>
+        </div>
+        </section>
 </main>
 
 <div class="mus-buttons">
     <a href="../index.html" class="button">Back to landing page</a>
 </div>
-
-<script>
-function loadPlaylist(playlistID) {
-    const player = document.getElementById("spotify-player");
-    player.src = "https://open.spotify.com/embed/playlist/" + playlistID + "?utm_source=generator&theme=0";
-}
-</script>
 
 </body>
 </html>
