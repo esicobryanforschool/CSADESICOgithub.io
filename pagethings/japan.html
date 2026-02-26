@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title>Japan</title>
     <link rel="stylesheet" href="../cssthings/placestogo.css">
 </head>
-<body>
 
-    <body style="
+<body style="
     background:
         linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
         url('../cssthings/pics/backgrounds/tokyo.jpg') no-repeat center center fixed;
@@ -16,16 +16,39 @@
 
     <p>
         I want to visit Japan to experience its blend of traditional culture and modern innovation.
-        From Mount Fuji to cherry blossoms and vibrant city life in Tokyo, it feels like a perfect balance of history and technology.
+        From Mount Fuji to cherry blossoms and vibrant city life in Tokyo, it feels like a perfect
+        balance of history and technology.
     </p>
 
     <div class="gallery">
-        <img src="../cssthings/pics/destinationpics/japan/Mount-Fuji-New.jpg">
-        <img src="../cssthings/pics/destinationpics/japan/tokyo.jpg">
-        <img src="../cssthings/pics/destinationpics/japan/sakuratree.jpg">
+        <img src="../cssthings/pics/destinationpics/japan/Mount-Fuji-New.jpg" alt="Mount Fuji">
+        <img src="../cssthings/pics/destinationpics/japan/tokyo.jpg" alt="Tokyo City">
+        <img src="../cssthings/pics/destinationpics/japan/sakuratree.jpg" alt="Cherry Blossoms">
     </div>
 
     <a href="dreams.html" class="button">Back</a>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <img id="lightbox-img">
+    </div>
+
+    <script>
+        const images = document.querySelectorAll(".gallery img");
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        images.forEach(img => {
+            img.addEventListener("click", () => {
+                lightbox.style.display = "flex";
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+    </script>
 
 </body>
 </html>

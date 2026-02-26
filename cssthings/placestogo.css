@@ -1,28 +1,19 @@
-/* Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Background */
 body {
+    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
-    min-height: 100vh;
-    margin: 0;
     text-align: center;
-    padding-bottom: 60px;
+    min-height: 100vh;
 }
 
-/* Page Title */
+/* Title */
 h1 {
     margin-top: 50px;
     font-size: 42px;
     letter-spacing: 2px;
 }
 
-/* Description Section */
+/* Description */
 p {
     max-width: 900px;
     margin: 30px auto;
@@ -32,7 +23,7 @@ p {
     color: #e2e8f0;
 }
 
-/* Image Gallery */
+/* Gallery Grid */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -46,10 +37,10 @@ p {
     height: 250px;
     object-fit: cover;
     border-radius: 15px;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover Effect */
 .gallery img:hover {
     transform: scale(1.05);
     box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
@@ -58,17 +49,36 @@ p {
 /* Back Button */
 .button {
     display: inline-block;
-    margin-top: 30px;
+    margin: 30px 0 60px;
     padding: 10px 25px;
     background-color: #4ba5cf;
     color: white;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
 }
 
 .button:hover {
     background-color: #055275;
     transform: scale(1.05);
+}
+
+/* Lightbox Overlay */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+/* Enlarged Image */
+.lightbox img {
+    max-width: 80%;
+    max-height: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 40px rgba(255, 255, 255, 0.3);
 }
