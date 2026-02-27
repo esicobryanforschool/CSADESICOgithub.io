@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif; 
     background-image: url("pics/backgrounds/mecha-break-2025-mgblog 2 background.jpg");
@@ -21,7 +25,7 @@ body {
     margin-top: 2.5rem;
     margin-bottom: 1.2rem;
     color: #222;
-    border-left: 4px solid #444;
+    border-left: 4px solid #4ba5cf;
     padding-left: 0.6rem;
 }
 
@@ -32,11 +36,12 @@ body {
     border-radius: 8px;
     background-color: rgba(245, 245, 245, 0.92);
     overflow: hidden;
+    scroll-margin-top: 100px;
 }
 
 /* Mech title */
 .mech h4 {
-    font-family: "Times New Roman", serif; /* Serif for mech titles */
+    font-family: "Times New Roman", serif;
     font-size: 1.25rem;
     margin-bottom: 0.6rem;
     color: #111;
@@ -44,7 +49,7 @@ body {
 
 /* Mech text */
 .mech p {
-    font-style: normal; /* Remove italic */
+    font-style: normal;
     margin-top: 0.8rem;
 }
 
@@ -60,7 +65,7 @@ body {
 /* Honorable mentions styling */
 .mech.honorable {
     background-color: rgba(235, 235, 235, 0.92);
-    border-left: 4px solid #888;
+    border-left: 4px solid #4ba5cf;
 }
 
 /* Top-ranked mech styling */
@@ -112,7 +117,7 @@ h2 {
     font-size: 1.6rem;
     margin-top: 2.5rem;
     margin-bottom: 1rem;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #4ba5cf;
     padding-bottom: 0.4rem;
 }
 
@@ -129,6 +134,7 @@ p {
 
 section {
     margin-bottom: 2rem;
+    scroll-margin-top: 80px;
 }
 
 a:hover {
@@ -144,10 +150,18 @@ footer p {
     text-align: center;
 }
 
+.mech img {
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+.mech a:hover img {
+    opacity: 0.8;
+}
+
 .button {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #4ba5cf; 
+  background-color: rgba(75, 165, 207, 0.9); 
   color: white;
   text-decoration: none;
   border-radius: 5px;
@@ -156,21 +170,175 @@ footer p {
 }
 
 .button:hover {
-  background-color: #055275; /* green on hover */
+  background-color: rgba(5, 82, 117, 0.95);
 }
-/*still not done but this part is for the small buttons to navigate this blog*/
+
+/* LIGHTBOX STYLES */
+
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(5, 40, 60, 0.95);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox:target {
+    display: flex;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border: 2px solid #4ba5cf;
+    box-shadow: 0 0 50px rgba(75, 165, 207, 0.4);
+}
+
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: #4ba5cf;
+    font-size: 40px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1001;
+    transition: color 0.3s;
+}
+
+.close-btn:hover {
+    color: #fff;
+}
+
+/* Image hover effect */
+.img-link {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.img-link img {
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.img-link:hover img {
+    transform: scale(1.02);
+    box-shadow: 0 4px 15px rgba(75, 165, 207, 0.4);
+}
+
+/* CHAPTER NAVIGATION */
+
+.chapter-nav {
+    position: sticky;
+    top: 0;
+    background: rgba(5, 40, 60, 0.9);
+    padding: 15px;
+    z-index: 100;
+    text-align: center;
+    border-bottom: 2px solid #4ba5cf;
+    backdrop-filter: blur(5px);
+}
+
+.chapter-nav h3 {
+    margin: 0 0 10px 0;
+    color: #4ba5cf;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chapter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.chapter-btn {
+    background: rgba(75, 165, 207, 0.7);
+    color: #fff;
+    border: 1px solid rgba(75, 165, 207, 0.5);
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 12px;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.chapter-btn:hover {
+    background: rgba(75, 165, 207, 0.95);
+    transform: translateY(-2px);
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(75, 165, 207, 0.3);
+}
+
+.chapter-btn.top5 {
+    background: rgba(192, 57, 43, 0.8);
+    border-color: rgba(192, 57, 43, 0.5);
+}
+
+.chapter-btn.top5:hover {
+    background: rgba(231, 76, 60, 0.95);
+    box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
+}
+
+/* BACK TO TOP BUTTON*/
+
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: rgba(75, 165, 207, 0.8);
+    color: #fff;
+    border: 1px solid rgba(75, 165, 207, 0.5);
+    padding: 15px 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+    z-index: 99;
+    transition: all 0.3s;
+    box-shadow: 0 4px 10px rgba(75, 165, 207, 0.3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    backdrop-filter: blur(3px);
+}
+
+.back-to-top:hover {
+    background: rgba(75, 165, 207, 0.95);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(75, 165, 207, 0.4);
+    text-decoration: none;
+}
+
+/*for blog navigation */
+
 .button-small {
   display: inline-block;
   padding: 5px 12px;        
-  background-color: #2196F3; 
+  background-color: rgba(33, 150, 243, 0.85); 
   color: white;
   text-decoration: none;
   border-radius: 4px;
   font-size: 0.85rem;    
   font-weight: bold;
   transition: background-color 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .button-small:hover {
-  background-color: #1976D2; /* darker blue on hover */
+  background-color: rgba(25, 118, 210, 0.95);
 }
